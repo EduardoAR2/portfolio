@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/portafolio.png" type="image/x-icon">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+   
+
+<body>
+<div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Eduardo</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        
+    </div>
+   <!-- SECCION INICIO -->
+  <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="assets/edu.png" alt="image" width="150px">
+            </div>
+            <h1>Eduardo Aguiñaga Ramírez</h1>
+            <h2>Desarrollador FrontEnd</h2>
+            <div class="redes">
+            <a href="https://www.facebook.com/eduardo.aguinaga.948" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/eduardo.armz" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/eduardo-agui%C3%B1aga-ramirez-66658621a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                
+            </div>
+        </div>
+    </section>
+
+
+<!-- SECCION SOBRE MI -->
+<section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+      <h2>Sobre Mí</h2>
+      <p>
+        <span>Hola, soy Eduardo Aguiñaga Ramírez.</span> Ingeniero en sistemas computacionales, apasionado por la 
+        tecnología y la programación, 
+      </p>
+  
+      <div class="fila">
+        <!-- datos personales -->
+        <div class="col">
+          <h3>Datos Personales</h3>
+          <ul>
+            <li>
+              <strong>Edad:</strong>
+              22 años
+            </li>
+            <li>
+              <strong>Teléfono:</strong>
+              4775776710
+            </li>
+            <li>
+              <strong>Email:</strong>
+              eduardoaginaga@gmail.com
+            </li>
+            <li>
+              <strong>Website:</strong>
+              www.example.com
+            </li>
+            <li>
+              <strong>Ubicación:</strong>
+              León, Guanajuato México.
+            </li>
+            <li>
+              <strong>Actual Cargo:</strong>
+              <span>Analista</span>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- intereses -->
+        <div class="col">
+          <h3>Intereses</h3>
+          <div class="contenedor-intereses">
+            <div class="interes">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>VIDEOJUEGOS</span>
+            </div>
+            <div class="interes">
+              <i class="fa-solid fa-headphones"></i>
+              <span>MUSICA</span>
+            </div>
+           
+            <div class="interes">
+              <i class="fa-solid fa-person-hiking"></i>
+              <span>DEPORTE</span>
+            </div>
+            <div class="interes">
+              <i class="fa-solid fa-code"></i>
+              <span>PROGRAMACION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button>
+        Descargar CV <i class="fa-solid fa-download"></i>
+        <span class="overlay"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SECCION SKILLS -->
+<section class="skills" id="skills">
+    <div class="contenido-seccion">
+      <h2>Skills</h2>
+      <div class="fila">
+        <!-- Technical Skill -->
+        <div class="col">
+          <h3>Technical Skills</h3>
+          <div class="skill">
+            <span>Javascript</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HTML & CSS</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>React</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>50%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>PHP</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>50%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>SQL</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Professional Skills -->
+        <div class="col">
+          <h3>Professional Skills</h3>
+          <div class="skill">
+            <span>Comunicación</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Trabajo en Equipo</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Adaptabilidad</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>Dedicación</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <span> Gestión del tiempo</span>
+            <div class="barra-skill">
+              <div class="progreso">
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECCION CURRICULUM -->
+  <section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+      <h2>Curriculum</h2>
+      <div class="fila">
+        <div class="col izquierda">
+          <h3>Educación <i class="fa-solid fa-book"></i></h3>
+  
+          <div class="item izq">
+            <h4>Ingeniería en sistemas computacionales</h4>
+            <span class="casa"
+              >Universidad virtual del estado de Guanajuato UVEG</span
+            >
+            <span class="fecha">2020 - 2024</span>
+            <p>
+              Estudié la ingeniería en sistemas computacionales en la UVEG, y tomé
+              la especialidad en Big Data
+            </p>
+            <div class="conectori">
+              <div class="circuloi"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col derecha">
+          <h3>Experiencia de trabajo <i class="fa-solid fa-briefcase"></i></h3>
+          <div class="item der">
+            <h4>Analista de mesa de ayuda</h4>
+            <span class="casa">Corporativo Muñoz y Asociados</span>
+            <span class="fecha">Mayo 2023 - Noviembre 2023</span>
+            <p>
+              Estuve como becario realizando practicas en el area de mesa de ayuda
+              en la empresa Corporativo Muñoz, Algunas de las actividades que
+              realizaba eran Soporte a equipos de computo y periféricos, Registro
+              y administración de usuarios de diferentes sistemas, Orientación a
+              los usuarios sobre algunos procesos, Monitoreos telefónicos a las
+              direferentes areas de la empresa para asegurar el correcto
+              funcionamiento de los sistemas, etc.
+            </p>
+            <div class="conectord">
+              <div class="circulod"></div>
+            </div>
+          </div>
+          <div class="item der">
+            <h4>Analista de soporte Web</h4>
+            <span class="casa">NTT DATA</span>
+            <span class="fecha">Abril 2024 - Actualmente</span>
+            <p>
+              Fuí ganador de la beca Evoluciona de JuventudesGTO la cual otorga la
+              oportunidad para poder realizar algún proyecto en alguna empresa
+              reconocida, logre ingresar a la empresa de software NTT DATA y
+              actualmente me encuentro participando en un proyecto enfocado al
+              sector médico, en el área de soporte web.
+            </p>
+            <div class="conectord">
+              <div class="circulod"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <h2>PORTFOLIO</h2>
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Conversor de monedas</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Conversor de monedas</h3>
+                    <p>Una web para hacer conversion de monedas de diferentes países
+                        se conecta a una API y obtiene los datos mas actuales de los precios.
+                    </p>
+                    <a href="https://conversormoneda.onrender.com" target="_blank">Ver Web</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Colores Aleatorios</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Colores Aleatorios</h3>
+                    <p>una web que permite generar colores aleatorios en formato hexadecimal y copiarlos</p>
+                    <a href="https://generadorcolorhex.onrender.com" target="_blank">Ver proyecto</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Gatitos Aleatorios</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Gatitos Aleatorios</h3>
+                    <p>Una web que genera imagenes aleatorias de gatos, se conecta a una API y se obtienen las imagenes</p>
+                    <a href="https://randomkittens.onrender.com" target="_blank">Ver proyecto</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>To-Do List</h3>
+                </div>
+                <div class="card-back">
+                    <h3>To-Do List</h3>
+                    <p>Una web que te permite registrar, editar, y eliminar tareas</p>
+                    <a href="#">Ver proyecto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+      <h2>CONTACTO</h2>
+      <div class="fila">
+        <!-- Formulario -->
+         
+        <div class="col">
+          <form action="https://formsubmit.co/eduardoaginaga@gmail.com" method="POST"id="formu">
+          <input type="text" placeholder="Nombre" id="name"/>
+          <p id="mensaje1" class="error-message"></p>
+          <input type="text" placeholder="Email" id="email" />
+          <p id="mensaje2" class="error-message"></p>
+  
+          <textarea
+            name=""
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Mensaje"></textarea>
+            <p id="mensaje3" class="error-message"></p>
+          <button id="enviar">
+            Enviar Mensaje <i class="fa-solid fa-paper-plane" ></i>
+            <span class="overlay"></span>
+          </button>
+          <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+        </form>
+        </div>
+      
+        <!-- Mapa -->
+        <div class="col">
+          <div class="info">
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                León Guanajuato México
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen"></i>
+                Llamame: 4775776710
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                eduardoaginaga@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+     <!-- footer -->
+     <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/eduardo.aguinaga.948" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/eduardo.armz" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/eduardo-agui%C3%B1aga-ramirez-66658621a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            
+        </div>
+        <div class="made-width">
+    <div class="row">
+        <p>Hecho con mucho ❤️ por Eduardo Aguiñaga | ©2024 León, Guanajuato México.</p>
+    </div>
+    </footer>
+
+</div>
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>
+
+
+  

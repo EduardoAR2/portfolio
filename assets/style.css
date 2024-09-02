@@ -1,0 +1,936 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&family=SUSE:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "SUSE";
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+/* MENU */
+.contenedor-header {
+  background: #0f0f0f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.contenedor-header header .logo a {
+  font-family: "New Amsterdam";
+  font-size: 36px;
+  color: #1bbcec;
+  text-decoration: none;
+}
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor-header header nav ul li {
+  width: 120px; /* Ancho fijo para todos los elementos */
+  text-align: center; /* Centra el texto dentro del botón */
+}
+.contenedor-header header nav ul li a {
+  display: block; /* Hace que el enlace ocupe todo el ancho del li */
+  font-weight: 500;
+  color: #fff;
+  margin: 0 15px;
+  padding: 3px;
+  transition: 0.5s;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Efecto hover con los bordes que se deslizan */
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: #09a1fa; /* Color del borde */
+  transition: width 0.4s ease;
+}
+
+nav ul li a::before {
+  top: 0;
+  left: 0; /* Inicia desde la izquierda */
+}
+
+nav ul li a::after {
+  bottom: 0;
+  right: 0; /* Inicia desde la derecha */
+}
+
+/* Hover: Efecto de borde que se expande hacia el centro desde los extremos */
+nav ul li a:hover::before {
+  width: 50%; /* Ancho de la mitad del elemento desde la izquierda */
+}
+
+nav ul li a:hover::after {
+  width: 50%; /* Ancho de la mitad del elemento desde la derecha */
+}
+
+.nav-responsive {
+  background-color: #1bbcec;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+/* SECCION I N I C I O */
+.inicio {
+  background-color: #262b30;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.inicio .contenido-banner {
+  padding: 20px;
+  background-color: #0f1113;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+}
+.inicio .contenedor-img{
+  height: 80px;
+}
+.inicio .contenido-banner img {
+  border: 10px solid #1bbcec;
+  display: block;
+  margin: auto;
+  border-radius: 100%;
+}
+.inicio .contenido-banner h1 {
+  color: #1bbcec;
+  margin-top: 70px;
+  font-size: 40px;
+  font-family: "New Amsterdam";
+}
+.inicio .contenido-banner h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+.inicio .contenido-banner .redes a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.inicio .contenido-banner .redes a:hover {
+  background-color: #1bbcec;
+}
+.sobremi {
+  background-color: #1b1f22;
+  color: #fff;
+  padding: 50px 20px;
+}
+.sobremi .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.sobremi h2 {
+  font-size: 50px;
+  color: #1bbcec;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+.sobremi .contenido-seccion p {
+  font: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span {
+  color: #1bbcec;
+  font-weight: bold;
+}
+.sobremi .fila {
+  display: flex;
+}
+.sobremi .fila .col {
+  width: 50%;
+}
+.sobremi .fila .col h3 {
+  font-size: 28px;
+  font-family: "New Amsterdam";
+  margin-bottom: 25px;
+}
+.sobremi .fila .col ul {
+  list-style: none;
+}
+.sobremi .fila .col ul li {
+  margin: 12px 0;
+}
+.sobremi .fila .col ul li strong {
+  display: inline-block;
+  color: #1bbcec;
+  width: 130px;
+}
+.sobremi .fila .col ul li span {
+  background-color: #1bbcec;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes {
+  width: 110px;
+  height: 100px;
+  font-size: small;
+  background-color:  #252a2e;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.sobremi button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #1bbcec;
+  border-radius: 10px;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.sobremi button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1bbcec;
+  z-index: -1;
+  transition: 1s;
+}
+.sobremi button:hover .overlay {
+  border-radius: 8px;
+  width: 100%;
+}
+.fa-gamepad {
+  color: #1bbcec;
+}
+.fa-headphones {
+  color: #1bbcec;
+}
+.fa-person-hiking {
+  color: #1bbcec;
+}
+.fa-code {
+  color: #1bbcec;
+}
+/* SECCION S K I L L S */
+.skills {
+  background-color: #262b30;
+  color: #fff;
+  padding: 50px 20px;
+}
+.skills .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.skills h2 {
+  color: #1bbcec;
+  font-size: 50px;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+.skills .fila {
+  display: flex;
+}
+.skills .fila .col {
+  width: 50%;
+  padding: 0 20px;
+}
+.skills .fila .col h3 {
+  font-size: 28px;
+  font-family: "New Amsterdam";
+  margin-bottom: 25px;
+}
+.skills .skill > span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+.skills .skill .barra-skill {
+  height: 8px;
+  width: 80%;
+  background-color: #131517;
+  position: relative;
+  margin-bottom: 30px;
+}
+.skills .skill .progreso {
+  background-color: #1bbcec;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+}
+.skills .skill .barra-skill span {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #1bbcec;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  top: -17px;
+  right: -15px;
+  font-size: 14px;
+}
+/* Estas clases se agregaran dinamicamente mediante javascript */
+.skills .skill .javascript {
+  width: 0%;
+  animation: 2s javascript forwards;
+}
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.skills .skill .htmlcss {
+  width: 0%;
+  animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .react {
+  width: 0%;
+  animation: 2s react forwards;
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.skills .skill .php {
+  width: 0%;
+  animation: 2s php forwards;
+}
+@keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.skills .skill .sql {
+  width: 0%;
+  animation: 2s sql forwards;
+}
+@keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.skills .skill .comunicacion {
+  width: 0%;
+  animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .trabajo {
+  width: 0%;
+  animation: 2s trabajo forwards;
+}
+@keyframes trabajo {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .adaptabilidad {
+  width: 0%;
+  animation: 2s adaptabilidad forwards;
+}
+@keyframes adaptabilidad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .dedicacion {
+  width: 0%;
+  animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.skills .skill .gestion {
+  width: 0%;
+  animation: 2s gestion forwards;
+}
+@keyframes gestion {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+/* SECCION CURRICULUM */
+.curriculum {
+  background-color: #1b1f22;
+  color: #fff;
+  padding: 50px 20px;
+}
+.curriculum .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.curriculum h2 {
+  color: #1bbcec;
+  font-size: 50px;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+.curriculum .fila {
+  display: flex;
+  justify-content: space-between;
+}
+.curriculum .fila .col {
+  width: 49%;
+  padding: 0 20px;
+}
+.curriculum .fila .col h3 {
+  font-size: 28px;
+  font-family: "New Amsterdam";
+  margin-bottom: 25px;
+}
+.curriculum .fila .izquierda {
+  border-right: 2px solid #252a2e;
+}
+.curriculum .fila .derecha {
+  border-left: 2px solid #252a2e;
+}
+.curriculum .fila .item {
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #252a2e;
+  position: relative;
+}
+.curriculum .fila .item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.curriculum .fila .item .casa {
+  color: #1bbcec;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+}
+.curriculum .fila .item .fecha {
+  display: block;
+  color: #1bbcec;
+  margin-bottom: 10px;
+}
+.curriculum .fila .item p {
+  line-height: 24px;
+}
+.curriculum .fila .izq {
+  border-right: 2px solid #1bbcec;
+  margin-right: 20px;
+}
+.curriculum .fila .der {
+  border-left: 2px solid #1bbcec;
+  margin-left: 20px;
+}
+.curriculum .fila .item .conectori {
+  height: 2px;
+  background-color: #1bbcec;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  right: -47px;
+  z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #1bbcec;
+  float: right;
+  position: relative;
+  bottom: 4px;
+}
+.curriculum .fila .item .conectord {
+  height: 2px;
+  background-color: #1bbcec;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  left: -47px;
+  z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #1bbcec;
+  float: left;
+  position: relative;
+  bottom: 4px;
+}
+.fa-book {
+  color: #1bbcec;
+}
+.fa-briefcase {
+  color: #1bbcec;
+}
+/* Estilo para la sección de portfolio */
+.portfolio {
+  background-color: #262b30;
+  padding: 50px 0;
+}
+.portfolio h2 {
+  color: #1bbcec;
+  font-size: 50px;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Contenedor de tarjetas */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Estilo general de las tarjetas */
+.card {
+  width: 280px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilo para el frente de la tarjeta */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 3px solid #1bbcec;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  
+}
+
+.card-front {
+  background-color:  #1b1f22;
+}
+
+.card-back {
+  background-color:  #1b1f22;
+  
+  transform: rotateY(180deg);
+}
+
+.card-back p {
+  margin: 10px 0;
+  font-size: 12px;
+  text-align: center;
+  
+  
+}
+
+.card-back a {
+  color: white;
+  text-decoration: none;
+  background-color: #1bbcec;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.card-back a:hover {
+  background-color: #0f8ec0;
+}
+
+/* SECCION CONTACTO */
+.contacto {
+  background-image: url(img/contact_bg.png);
+  background-color: #1b1f22;
+  color: #fff;
+  padding: 50px 0;
+}
+.contacto .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+.contacto h2 {
+  color: #1bbcec;
+  font-size: 48px;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+.contacto .fila {
+  display: flex;
+}
+.contacto .col {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+}
+.contacto .col input,
+.contacto .col textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: solid 2px #1bbcec;
+  margin-bottom: 8px;
+  background-color: #252a2e;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.contacto .col textarea {
+  resize: none;
+
+}
+.contacto button {
+  cursor: pointer;
+  border: 2px solid #1bbcec;
+  border-radius: 10px;
+  background-color: #1bbcec;
+  width: fit-content;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.contacto button:hover{
+  background-color: #0f8ec0;
+  border: 2px solid #0f8ec0;
+}
+
+.contacto .col .info {
+  position: absolute;
+  top: 40%;
+  background-color: #252a2e;
+  padding: 20px;
+  max-width: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contacto .col .info ul {
+  list-style: none;
+}
+.contacto .col .info ul li {
+  margin-bottom: 20px;
+}
+.contacto .col .info ul li i {
+  color: #1bbcec;
+  display: inline-block;
+  margin-right: 10px;
+}
+.error-message{
+  margin-bottom: 10px;
+  height: 10px;
+  color: red;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+}
+footer {
+  background-color: #262b30;
+  color: #fff;
+  padding: 50px 0 30px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+footer .redes {
+  margin-bottom: 20px;
+}
+footer .redes a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+footer .redes a:hover{
+  background-color: #1bbcec;
+}
+footer .arriba {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #1bbcec;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 18px;
+}
+footer .arriba:hover{
+  background-color: #0f8ec0;
+}
+.made-width{
+  background-color:#252a2e ;
+  text-align: center;
+  color: #919191;
+}
+/* Sección Sent Email*/
+
+.sent .contenido-seccion{
+  background-color: #1b1f22;
+  color: #fff;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+.sent .contenido-seccion {
+  width: 100%;
+  margin: auto;
+}
+.sent h2 {
+  margin-top: 5px;
+  font-size: 50px;
+  color: #1bbcec;
+  font-family: "New Amsterdam";
+  text-align: center;
+  padding: 20px 0;
+}
+.sent .contenido-seccion p {
+  font-size: 15px;
+ 
+}
+
+.sent h3 {
+  font-size: 28px;
+  font-family: "New Amsterdam";
+  margin-bottom: 25px;
+}
+.sent a{
+  color: #1bbcec;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 980px) {
+  nav {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #252a2e;
+    width: 180px;
+  }
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .sobremi .fila {
+    display: block;
+  }
+  .sobremi .fila .col {
+    width: fit-content;
+  }
+
+  .skills .fila {
+    display: block;
+  }
+  .skills .fila .col {
+    width: 100%;
+  }
+  .skills .fila .col .barra-skill {
+    width: 100%;
+  }
+
+  .curriculum .fila {
+    display: block;
+  }
+  .curriculum .fila .col {
+    width: 90%;
+  }
+  .curriculum .fila .derecha {
+    margin-left: 20px;
+  }
+
+  .portfolio .galeria {
+    display: block;
+    width: 100%;
+  }
+  .portfolio .galeria .proyecto {
+    max-width: 100%;
+  }
+  .portfolio .galeria .proyecto img {
+    width: 100%;
+  }
+  .contacto{
+    padding: 50px 0 150px;
+  }
+  .contacto .fila {
+    display: block;
+    
+  }
+  .contacto .fila .col {
+    width: 100%;
+    margin-top: 100px;
+  }
+  footer a{
+    margin-top: 20px;
+    
+  }
+  .contacto .col .info{
+    margin-bottom: 100px;
+  }
+.contacto .col input,
+.contacto .col textarea {
+  
+  width: 80%;
+
+}
+.contacto .col form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+}
+
+
+
