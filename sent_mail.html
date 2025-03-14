@@ -8,6 +8,22 @@
     <link rel="shortcut icon" href="assets/portafolio.png" type="image/x-icon">
     <title>Portafolio - Mail Enviado</title>
     <link rel="stylesheet" href="assets/style.css">
+
+
+    <script>
+        
+      setTimeout(function(){
+          window.location.href = 'index.html';
+      }, 12000);
+
+  if (!sessionStorage.getItem("mensajeEnviado")) {
+      window.location.href = "index.html"; // Redirigir si no se envió el formulario
+  } else {
+      sessionStorage.removeItem("mensajeEnviado"); // Borra el flag después de mostrar la página
+  }
+
+
+  </script>
 </head>
    <body>
     
@@ -45,22 +61,6 @@
   <p>Hecho con mucho ❤️ por Eduardo Aguiñaga | ©2024 León, Guanajuato México.</p>
 </div>
 </footer>
-
-
-<script>
-        
-        setTimeout(function(){
-            window.location.href = 'index.html';
-        }, 12000);
-
-    if (!sessionStorage.getItem("mensajeEnviado")) {
-        window.location.href = "index.html"; // Redirigir si no se envió el formulario
-    } else {
-        sessionStorage.removeItem("mensajeEnviado"); // Borra el flag después de mostrar la página
-    }
-
-
-    </script>
    </body>
 
 </html>
