@@ -52,6 +52,14 @@
         setTimeout(function(){
             window.location.href = 'index.html';
         }, 12000);
+
+    if (!sessionStorage.getItem("mensajeEnviado")) {
+        window.location.href = "index.html"; // Redirigir si no se envió el formulario
+    } else {
+        sessionStorage.removeItem("mensajeEnviado"); // Borra el flag después de mostrar la página
+    }
+
+
     </script>
    </body>
 

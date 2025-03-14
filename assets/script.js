@@ -41,23 +41,6 @@ window.onscroll = function(){
 } 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**--------------------------------------------------------------------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
 const nombre = document.getElementById("name");
@@ -95,9 +78,9 @@ boton.addEventListener("click", (event) => {
         valid = false;
 
     }
-
     if (valid) {
-        document.getElementById("formu").submit(); // Enviar el formulario si es válido
+        sessionStorage.setItem("mensajeEnviado", "true"); // Guardar estado
+        document.getElementById("formu").submit(); // Enviar formulario
     }
 
 });
