@@ -26,6 +26,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+  gap: 100px;
 }
 .contenedor-header header .logo a {
   font-family: "New Amsterdam";
@@ -38,12 +39,13 @@ html {
   list-style: none;
 }
 .contenedor-header header nav ul li {
-  width: 120px; /* Ancho fijo para todos los elementos */
+  width: 150px; /* Ancho fijo para todos los elementos */
   text-align: center; /* Centra el texto dentro del botón */
 }
 .contenedor-header header nav ul li a {
   display: block; /* Hace que el enlace ocupe todo el ancho del li */
   font-weight: 500;
+  font-size: 1rem;
   color: #fff;
   margin: 0 15px;
   padding: 3px;
@@ -829,21 +831,7 @@ footer .arriba:hover{
   color: #1bbcec;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 980px) {
